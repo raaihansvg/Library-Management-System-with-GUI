@@ -2,7 +2,7 @@ import customtkinter as ctk
 from datetime import datetime, timedelta
 from tkinter import messagebox
 
-# Daftar Buku di Perpustakaan
+
 buku_perpustakaan = {
     "Buku A": {"kategori": "Fiksi", "status": "tersedia", "peminjam": None, "antrian": [], "tanggal_pinjam": None, "perpanjangan": 0},
     "Buku B": {"kategori": "Non-Fiksi", "status": "tersedia", "peminjam": None, "antrian": [], "tanggal_pinjam": None, "perpanjangan": 0},
@@ -15,7 +15,7 @@ buku_perpustakaan = {
 riwayat_peminjaman = {}
 DURASI_PEMINJAMAN = 7
 
-# Setup GUI CustomTkinter
+
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
 
@@ -23,12 +23,12 @@ app = ctk.CTk()
 app.title("Sistem Manajemen Perpustakaan")
 app.geometry("600x600")
 
-# Function untuk membersihkan frame
+
 def clear_frame():
     for widget in app.winfo_children():
         widget.pack_forget()
 
-# Fungsi untuk membuat entry fields
+
 def create_entry_fields():
     nama_label = ctk.CTkLabel(app, text="Nama Peminjam:")
     nama_label.pack(pady=5)
@@ -42,11 +42,11 @@ def create_entry_fields():
 
     return nama_entry, buku_entry
 
-# Fungsi untuk kembali ke halaman utama
+
 def home_button():
     ctk.CTkButton(app, text="Kembali ke Halaman Utama", command=home_page).pack(pady=10)
 
-# Fungsi halaman utama
+
 def home_page():
     clear_frame()
     welcome_label = ctk.CTkLabel(app, text="📚 Selamat Datang di Perpustakaan", font=("Arial", 16, "bold"))
@@ -67,10 +67,10 @@ def home_page():
         button = ctk.CTkButton(app, text=text, command=command)
         button.pack(pady=5)
     
-    # Tambahkan tombol Exit
+  
     ctk.CTkButton(app, text="Keluar", command=app.quit).pack(pady=20)
 
-# Fungsi untuk Pinjam Buku
+
 def go_to_pinjam_buku():
     clear_frame()
     title_label = ctk.CTkLabel(app, text="📖 Pinjam Buku", font=("Arial", 14, "bold"))
@@ -96,7 +96,7 @@ def go_to_pinjam_buku():
     ctk.CTkButton(app, text="Pinjam Buku", command=pinjam_buku_action).pack(pady=10)
     home_button()
 
-# Fungsi untuk Kembalikan Buku
+
 def go_to_kembalikan_buku():
     clear_frame()
     title_label = ctk.CTkLabel(app, text="🔄 Kembalikan Buku", font=("Arial", 14, "bold"))
@@ -122,7 +122,7 @@ def go_to_kembalikan_buku():
     ctk.CTkButton(app, text="Kembalikan Buku", command=kembalikan_buku_action).pack(pady=10)
     home_button()
 
-# Fungsi untuk Cek Batas Waktu
+
 def go_to_cek_batas_waktu():
     clear_frame()
     title_label = ctk.CTkLabel(app, text="⏳ Cek Batas Waktu", font=("Arial", 14, "bold"))
@@ -150,7 +150,7 @@ def go_to_cek_batas_waktu():
     ctk.CTkButton(app, text="Cek Batas Waktu", command=cek_batas_waktu_action).pack(pady=10)
     home_button()
 
-# Fungsi untuk Reservasi Buku
+
 def go_to_reservasi_buku():
     clear_frame()
     title_label = ctk.CTkLabel(app, text="📝 Reservasi Buku", font=("Arial", 14, "bold"))
@@ -176,7 +176,6 @@ def go_to_reservasi_buku():
     ctk.CTkButton(app, text="Reservasi Buku", command=reservasi_buku_action).pack(pady=10)
     home_button()
 
-# Fungsi Perpanjang Peminjaman
 def go_to_perpanjang_peminjaman():
     clear_frame()
     title_label = ctk.CTkLabel(app, text="🔄 Perpanjang Peminjaman", font=("Arial", 14, "bold"))
@@ -203,7 +202,7 @@ def go_to_perpanjang_peminjaman():
     ctk.CTkButton(app, text="Perpanjang Peminjaman", command=perpanjang_peminjaman_action).pack(pady=10)
     home_button()
 
-# Fungsi Tampilkan Daftar Buku
+
 def go_to_tampilkan_daftar_buku():
     clear_frame()
     title_label = ctk.CTkLabel(app, text="📚 Daftar Buku", font=("Arial", 14, "bold"))
@@ -215,7 +214,6 @@ def go_to_tampilkan_daftar_buku():
 
     home_button()
 
-# Fungsi Lihat Riwayat
 def go_to_riwayat():
     clear_frame()
     title_label = ctk.CTkLabel(app, text="📜 Riwayat Peminjaman", font=("Arial", 14, "bold"))
@@ -228,7 +226,7 @@ def go_to_riwayat():
 
     home_button()
 
-# Fungsi Lacak Status Buku
+
 def go_to_lacak_status_buku():
     clear_frame()
     title_label = ctk.CTkLabel(app, text="🔍 Lacak Status Buku", font=("Arial", 14, "bold"))
@@ -254,6 +252,6 @@ def go_to_lacak_status_buku():
     ctk.CTkButton(app, text="Lacak Status Buku", command=lacak_status_action).pack(pady=10)
     home_button()
 
-# Tampilkan Halaman Utama
+
 home_page()
 app.mainloop()
