@@ -1,11 +1,11 @@
-# 📚 Library Management System with GUI
+#  Library Management System with GUI
 
 Library Management System adalah aplikasi berbasis **Python** dengan **Graphical User Interface (GUI)** yang dibuat menggunakan **CustomTkinter**.  
 Aplikasi ini mensimulasikan sistem manajemen perpustakaan sederhana seperti peminjaman buku, pengembalian, reservasi, dan pelacakan status buku.
 
 ---
 
-## ✨ Features
+##  Features
 
 - 📖 Peminjaman buku
 - 🔄 Pengembalian buku
@@ -18,7 +18,7 @@ Aplikasi ini mensimulasikan sistem manajemen perpustakaan sederhana seperti pemi
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Python**
 - **CustomTkinter**
@@ -27,7 +27,7 @@ Aplikasi ini mensimulasikan sistem manajemen perpustakaan sederhana seperti pemi
 
 ---
 
-## 🧠 System Logic Overview
+##  System Logic Overview
 
 - Data buku disimpan dalam struktur **dictionary**
 - Setiap buku memiliki:
@@ -40,7 +40,7 @@ Aplikasi ini mensimulasikan sistem manajemen perpustakaan sederhana seperti pemi
 
 ---
 
-## ▶️ How to Run
+##  How to Run
 
 1. Pastikan Python sudah terinstall
 2. Install dependency:
